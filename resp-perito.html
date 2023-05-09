@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nueva Incidencia</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 30px;
+			width: 80%;
+			max-width: 500px;
+		}
+		.box {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			padding: 20px;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="date"], textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			resize: vertical;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+		}
+		textarea {
+			min-height: 100px;
+		}
+		.btn-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<h1>Nueva Incidencia</h1>
+	<div class="container">
+		<div class="box">
+			<h2>Datos de la incidencia</h2>
+			<form>
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha" name="fecha" required>
+
+				<label for="descripcion">Descripción:</label>
+				<textarea id="descripcion" name="descripcion" required></textarea>
+
+				<label for="respuesta">Respuesta a petición:</label>
+				<textarea id="respuesta" name="respuesta"></textarea>
+
+				<div class="btn-container">
+					<button type="submit" class="btn">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

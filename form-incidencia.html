@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de incidencias</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-start;
+			margin: 0 auto;
+			margin-top: 30px;
+			width: 80%;
+			max-width: 800px;
+		}
+		.box {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			padding: 20px;
+			flex-basis: 100%;
+			margin-bottom: 30px;
+			box-sizing: border-box;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #555;
+		}
+		input[type="text"], textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		input[type="file"] {
+			margin-bottom: 20px;
+      		font-size: 13px;
+			font-family: Arial, sans-serif;
+		}	
+      	input[type="date"] {
+  			display: block;
+ 			width: 100%;
+ 			padding: 10px;
+ 			margin-bottom: 20px;
+      		border-radius: 5px;
+ 			border: 1px solid #ccc;
+ 			box-sizing: border-box;
+ 			background-color: #fff;
+ 			color: #333;
+      		font-size: 15px;
+			font-family: Arial, sans-serif;
+		}
+		textarea {
+			height: 100px;
+		}
+		.btn-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+		.btn {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Formulario de incidencias</h1>
+	<div class="container">
+		<div class="box">
+			<form>
+				<label for="resumen">Resumen:</label>
+				<input type="text" id="resumen" name="resumen" required>
+
+				<label for="tipo">Tipo de incidencia:</label>
+				<input type="text" id="tipo" name="tipo" required>
+
+				<label for="causa">Causa:</label>
+				<input type="text" id="causa" name="causa" required>
+
+				<label for="codigo">Cod. del dispositivo:</label>
+				<input type="text" id="codigo" name="codigo" required>
+
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha" name="fecha" required>
+
+				<label for="imagenes">Subir imágenes:</label>
+				<input type="file" id="imagenes" name="imagenes[]" accept="image/*" multiple>
+
+				<div class="btn-container">
+					<button type="submit" class="btn">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
